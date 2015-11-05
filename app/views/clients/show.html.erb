@@ -15,8 +15,7 @@
       <td><%= course.id %></td>
       <td><%= course.title %></td>
       <td><%= course.text %></td>
-      <td><%= link_to 'Show', :courses %></td>
-
+      <td><%= link_to 'Show', client_course_path(course.client.id, course.id) %></td>
     </tr>
   <% end %>
 </table>

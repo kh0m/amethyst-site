@@ -1,0 +1,20 @@
+<h1>Courses</h1>
+
+<%= link_to "Add Course", new_client_path %>
+
+<br><br>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= course.client.name %></td>
+      <td><%= link_to 'Show', client_course(course) %></td>
+      <td><%= link_to 'Destroy', client_path(course),
+        method: :delete,
+        data: { confirm: 'Are you sure?' }  %></td>
+    </tr>
+  <% end %>
+</table>

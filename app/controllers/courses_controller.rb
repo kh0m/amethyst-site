@@ -1,6 +1,11 @@
 class CoursesController < ApplicationController
+    def index
+      @courses = Course.all
+    end
+
     def show
-      @course = Course.find(params[:id])
+      @client = Client.find(params[:client_id])
+      @course = @client.courses.find(params[:id])
     end
 
     def new
@@ -15,7 +20,7 @@ class CoursesController < ApplicationController
       @client = Client.find(params[:client_id])
       @course = @client.courses.create(course_params)
       if @course.save
-        redirect_to @course
+        redirect_to client_path(@client)
       else
         render 'new'
       end
