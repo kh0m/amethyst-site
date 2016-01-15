@@ -15,7 +15,10 @@
       <td><%= course.id %></td>
       <td><%= course.title %></td>
       <td><%= course.text %></td>
-      <td><%= link_to 'Show', client_course_path(course.client.id, course.id) %></td>
+      <td><%= link_to 'Show', client_course_path(@client.id, course.id) %></td>
+      <td><%= link_to 'Destroy', client_course_path(@client.id, course.id),
+        method: :delete,
+        data: { confirm: 'Are you sure?' }  %></td>
     </tr>
   <% end %>
 </table>

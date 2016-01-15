@@ -19,10 +19,11 @@ class CoursesController < ApplicationController
     def create
       @client = Client.find(params[:client_id])
       @course = @client.courses.create(course_params)
+
       if @course.save
         redirect_to client_path(@client)
       else
-        render 'new'
+        render 'clients/show'
       end
     end
 
@@ -37,8 +38,9 @@ class CoursesController < ApplicationController
 
     def destroy
       @course = Course.find(params[:id])
+      @client = @course.client
       @course.destroy
-      redirect_to courses_path
+      redirect_to client_path(@client.id)
     end
 
     private
