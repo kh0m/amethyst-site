@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+  require 'open-uri'
+  require 'json'
+
+  response = open('http://par8891/myapi/api/clients').read
+
+  json = JSON.parse(response, opts = {
+    symbolize_names: true
+    })
+
+  json.each do |item|
+    Client.create(name: "#{item[:name]}")
+  end
