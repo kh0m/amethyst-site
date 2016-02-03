@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/auth/auth0/callback' => 'auth0#callback'
+
+  get 'auth/failure' => 'auth0#failure'
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -10,13 +14,14 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+  delete 'logout' => 'auth0#destroy'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :clients do
-     resources :courses
-  end
+  resources :courses
+  resources :users
 
   # Example resource route with options:
   #   resources :products do

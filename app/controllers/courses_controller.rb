@@ -17,14 +17,19 @@ class CoursesController < ApplicationController
     end
 
     def create
-      @client = Client.find(params[:client_id])
-      @course = @client.courses.create(course_params)
+      # create new course record with current user as a user
+      @course = Course.create(course_params)
 
-      if @course.save
-        redirect_to client_path(@client)
-      else
-        render 'clients/show'
-      end
+      @course.file = params[:course][:file].path
+
+      @user = User.find_by_email(session[:userinfo].info.email)
+      @course.users.push(@user)
+
+      upload
+
+      @course.save
+
+      redirect_to user_path(@user.id)
     end
 
     def update
@@ -43,8 +48,17 @@ class CoursesController < ApplicationController
       redirect_to client_path(@client.id)
     end
 
+
     private
       def course_params
-        params.require(:course).permit(:title, :text)
+        params.require(:course).permit(:title, :file)
+      end
+
+      def upload
+        uploaded_io = params[:course][:file]
+        File.open(Rails.root.join('public', 'uploads',
+         uploaded_io.original_filename), 'wb') do |file|
+          file.write(uploaded_io.read)
+        end
       end
 end

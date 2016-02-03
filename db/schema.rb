@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929201500) do
+ActiveRecord::Schema.define(version: 20160202024434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,13 +24,24 @@ ActiveRecord::Schema.define(version: 20150929201500) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
-    t.text     "text"
+    t.text     "file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "client_id"
   end
 
-  add_index "courses", ["client_id"], name: "index_courses_on_client_id", using: :btree
+  create_table "courses_users", id: false, force: :cascade do |t|
+    t.integer "user_id",   null: false
+    t.integer "course_id", null: false
+  end
 
-  add_foreign_key "courses", "clients"
+  add_index "courses_users", ["course_id"], name: "index_courses_users_on_course_id", using: :btree
+  add_index "courses_users", ["user_id"], name: "index_courses_users_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "role",       default: "user"
+  end
+
 end
