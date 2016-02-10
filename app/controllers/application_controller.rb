@@ -13,10 +13,6 @@ class ApplicationController < ActionController::Base
     redirect_to '/' unless current_user
   end
 
-  def require_specific_user(id)
-    redirect_to '/' unless current_user.id == id
-  end
-
   def require_manager
     redirect_to '/' unless current_user.manager?
   end

@@ -1,10 +1,12 @@
-<h1>User Page</h1>
+<h1>Welcome!</h1>
 
+<h2>User page for <%=@user.email%></h2>
 
-<h2>Welcome, <%=@user.email%>!</h2>
+<% if current_user && current_user.admin? %>
+  <%= link_to "All Users", users_path%>
+<% end %>
 
-<h3>Your role: <%=@user.role%></h3>
-<h3>Your assigned courses:</h3>
+<h3>Assigned courses:</h3>
 
 <% @user.courses.each do |c| %>
   <ul>
@@ -13,6 +15,6 @@
   </ul>
 <% end %>
 
-<% if current_user && (current_user.manager? || current_user.admin?) %>
-  <%= button_to "Add Course", new_course_path, { method: :get } %>
+<% if current_user && current_user.admin? %>
+  <%= button_to "Add Course", new_user_course_path(@user.id), { method: :get } %>
 <% end %>

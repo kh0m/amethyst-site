@@ -3,7 +3,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    redirect_to "/users/#{current_user.id}" if @user.id != current_user.id
+    if @user.id != current_user.id
+      redirect_to "/users/#{current_user.id}" unless ( current_user.manager? || current_user.admin? )
+    end
+  end
+
+  def index
+    @users = User.all
   end
 
   def update
@@ -13,6 +19,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:id,:email)
+      params.require(:user).permit(:id, :email)
     end
 end

@@ -9,6 +9,7 @@ class CoursesController < ApplicationController
     end
 
     def new
+      @user = User.find(params[:user_id])
       @course = Course.new
     end
 
@@ -17,19 +18,17 @@ class CoursesController < ApplicationController
     end
 
     def create
-      # create new course record with current user as a user
-      @course = Course.create(course_params)
+      @user = User.find(params[:user_id])
+      @course = @user.courses.create(course_params)
 
       @course.file = params[:course][:file].path
-
-      @user = User.find_by_email(session[:userinfo].info.email)
-      @course.users.push(@user)
-
       upload
 
-      @course.save
-
-      redirect_to user_path(@user.id)
+      if @course.save
+        redirect_to user_path(@user.id)
+      else
+        render json: @course.errors.to_json
+      end
     end
 
     def update

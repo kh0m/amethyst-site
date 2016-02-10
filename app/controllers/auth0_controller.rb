@@ -8,7 +8,7 @@ class Auth0Controller < ApplicationController
 
     user = User.find_by_email(email) ? User.find_by_email(email) : User.create(email: "#{email}")
 
-    # Redirect to the URL you want after successfull auth
+    # redirect to the URL you want after successfull auth
     redirect_to "/users/#{user.id}"
   end
 
@@ -19,6 +19,6 @@ class Auth0Controller < ApplicationController
 
   def destroy
     session[:userinfo] = nil
-    redirect_to '/'
+    redirect_to "https://pinsonault.auth0.com/v2/logout?returnTo=#{request.base_url + home_index_path}"
   end
 end

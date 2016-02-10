@@ -16,6 +16,7 @@
   }
 </script>
 
-<button onclick="window.signin();">Login</button>
-
+<% if !current_user %>
+  <button onclick="window.signin();">Login</button>
+<% end %>
 <br/>

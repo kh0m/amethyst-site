@@ -8,12 +8,14 @@
 </head>
 <body>
 
+<% if current_user %>
+  <p>You are logged in as: <%= current_user.email %></p>
+  <p>Your role: <%= current_user.role %></p>
+  <%= button_to "Logout", logout_url, method: 'delete' %>
+<% end %>
+
 <%= yield %>
 
-<br/>
-<% if current_user %>
-<%= button_to "Logout", logout_url, method: 'delete' %>
-<% end %>
 
 </body>
 </html>
