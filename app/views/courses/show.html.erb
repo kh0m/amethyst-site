@@ -1,9 +1,26 @@
 <p>
-    <strong>Title:</strong>
-    <%= @course.title %>
+  <strong>Title:</strong>
+  <%= @course.title %>
 </p>
 
 <p>
-    <strong>Text:</strong>
-    <%= @course.text %>
+  <strong>Location:</strong>
+  <%= @course.file %>
 </p>
+
+<h3>Users for this course:</h3>
+<table>
+  <% @course.users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br/><br/>
+<% if current_user && current_user.admin? %>
+  <%= button_to "Edit Course", edit_course_path, {method: :get} %>
+<% end %>
+
+<br/><br/>
+<%= link_to "All Courses", courses_path %>

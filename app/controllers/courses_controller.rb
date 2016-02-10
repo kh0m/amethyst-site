@@ -4,12 +4,11 @@ class CoursesController < ApplicationController
     end
 
     def show
-      @client = Client.find(params[:client_id])
-      @course = @client.courses.find(params[:id])
+      @course = Course.find(params[:id])
     end
 
     def new
-      @user = User.find(params[:user_id])
+      # @user = User.find(params[:user_id])
       @course = Course.new
     end
 
@@ -33,7 +32,7 @@ class CoursesController < ApplicationController
 
     def update
       @course = Course.find(params[:id])
-      if @course.update(course_params)
+      if @course.user_ids = params[:course][:users]
         redirect_to @course
       else
         render 'edit'
@@ -42,9 +41,8 @@ class CoursesController < ApplicationController
 
     def destroy
       @course = Course.find(params[:id])
-      @client = @course.client
       @course.destroy
-      redirect_to client_path(@client.id)
+      redirect_to courses_path
     end
 
 
