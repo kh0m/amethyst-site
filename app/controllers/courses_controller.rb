@@ -8,7 +8,6 @@ class CoursesController < ApplicationController
     end
 
     def new
-      # @user = User.find(params[:user_id])
       @course = Course.new
     end
 
@@ -17,16 +16,13 @@ class CoursesController < ApplicationController
     end
 
     def create
-      @user = User.find(params[:user_id])
-      @course = @user.courses.create(course_params)
-
-      @course.file = params[:course][:file].path
-      upload
+      @course = Course.create(course_params)
 
       if @course.save
-        redirect_to user_path(@user.id)
+        @course.upload(params[:course][:file])
+        redirect_to courses_path
       else
-        render json: @course.errors.to_json
+        render 'new'
       end
     end
 
@@ -51,11 +47,4 @@ class CoursesController < ApplicationController
         params.require(:course).permit(:title, :file)
       end
 
-      def upload
-        uploaded_io = params[:course][:file]
-        File.open(Rails.root.join('public', 'uploads',
-         uploaded_io.original_filename), 'wb') do |file|
-          file.write(uploaded_io.read)
-        end
-      end
 end

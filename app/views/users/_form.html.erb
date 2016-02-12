@@ -1,0 +1,30 @@
+<%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3>Select Role</h3>
+  <%= f.select(:role, User.roles.keys.map {|role| role}) %>
+
+
+  <h3>Select Courses</h3>
+  <%= f.collection_check_boxes(:courses, Course.all, :id, :title) do |b| %>
+      <%= b.check_box checked: @user.course_ids.include?(b.value) %><%= b.label %><br/>
+  <% end %>
+
+  <br/>
+
+  <%= f.submit%>
+
+<% end %>

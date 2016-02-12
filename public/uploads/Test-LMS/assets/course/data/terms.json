@@ -1,0 +1,77 @@
+[
+    {
+        "id": 0,
+        "name" : "Accountable Care Organizations (ACOs)",
+        "definition" : "Network of providers linked together to improve the healthcare quality and reduce costs for a defined patient population. ACOs might include hospital-focused integrated systems, large multispecialty physician groups, independent practice associations (IPAs), and small physician groups."
+    },
+    {
+        "id" : 1,
+        "name" : "Affordable Care Act",
+        "definition" : "This federal statute was signed into law on March 23, 2010. It includes numerous health care–related provisions that began to take effect in 2010 and will continue to take effect through 2019. It includes expanding Medicaid, subsidizing insurance premiums, offering incentives for businesses to provide health coverage, establishing healthcare exchanges, prohibiting the denial of coverage based on preexisting conditions, and supporting medical research."
+    },
+    {
+        "id" : 3,
+        "name" : "Dual Eligibles",
+        "definition" : "Low-income individuals who qualify for both Medicare and Medicaid benefits."
+    },
+    {
+        "id" : 4,
+        "name" : "Entitlement Program",
+        "definition" : "A government program that guarantees certain benefits to a particular group or segment of the population."
+    },
+    {
+        "id" : 5,
+        "name" : "Essential Health Benefits",
+        "definition" : "A core package of items and services offered in the individual and small-group markets, both inside and outside of health insurance marketplaces."
+    },
+    {
+        "id" : 6,
+        "name" : "Federal Poverty Level (FPL)",
+        "definition" : "The U.S. government uses the federal poverty level to define who is poor. It's based on a family's annual cash income, rather than their total wealth, annual consumption, or own assessment of well-being. It's used to determine who receives federal subsidies or aid."
+    },
+    {
+        "id" : 7,
+        "name" : "Health Insurance Exchanges",
+        "definition" : "Marketplaces to shop for health insurance, intended for small businesses and individuals to band together to acquire better pricing and a larger variety of insurance options. These cooperatives are intended for those who work for firms with 100 or fewer employees, individuals whose employers do not provide health insurance, self-employed individuals, the unemployed, or retirees who are not eligible for Medicare. Midsize and large businesses are allowed to participate after 2017."
+    },
+    {
+        "id" : 8,
+        "name" : "Medicaid Drug Rebate Program",
+        "definition" : "A partnership between CMS, state Medicaid agencies, and participating drug manufacturers that helps offset the federal and state costs of most outpatient prescription drugs dispensed to Medicaid patients."
+    },
+    {
+        "id" : 9,
+        "name" : "Medicare",
+        "definition" : "Federally subsidized medical insurance program designed to supplement healthcare coverage for patients over 65, the disabled, and end-stage renal disease patients. Like Medicaid, Medicare was established under the 1965 Social Security Act. In recent years, Medicare administrators under HCFA (Health Care Financing Administration) have begun to turn to managed care organizations in an effort to control costs. In 2001, HCFA changed its name to the Centers for Medicare and Medicaid Services."
+    },
+    {
+        "id" : 10,
+        "name" : "Payer Mix",
+        "definition" : "Composition of the various revenue sources in a physician practice—usually a combination of commercial, Medicare, Medicaid, self/private pay, and &quot;other.&quot;"
+    },
+    {
+        "id" : 11,
+        "name" : "Patient-Centered Medical Homes (PCMH)",
+        "definition" : "An enhanced primary care model that supports the use of primary care practices as &quot;hubs&quot; for coordinating care among multiple providers; the goal is to provide comprehensive, timely, accessible, and appropriate care to their patients."
+    },
+    {
+        "id" : 12,
+        "name" : "Preferred Drug List (PDL)",
+        "definition" : "A list of approved drugs established by states for the purpose of managing Medicaid costs, mainly through encouraged use of generics and rebates for brand-name drugs. Prior authorization programs are usually in place to ensure access to medically necessary drugs."
+    },
+    {
+        "id" : 13,
+        "name" : "Prescription Drug Plans (PDPs)",
+        "definition" : "A stand-alone plan covering <em>only prescription drugs.</em>"
+    },
+    {
+        "id" : 14,
+        "name" : "Supplemental Rebates",
+        "definition" : "Rebates paid by manufacturers to state Medicaid agencies in addition to the rebates paid under the Medicaid drug rebate law. These supplemental rebates are typically paid by manufacturers to ensure that the companies’ drugs are included on the state Medicaid agency’s preferred drug list (PDL). Non-PDL drugs are often subject to prior authorization procedures, which tend to discourage orders due to the administrative burdens placed on Medicaid providers."
+    },
+    {
+        "id" : 15,
+        "name" : "340B",
+        "definition" : "Requires pharmaceutical manufacturers to provide discounts on outpatient prescription drugs to entities that serve high numbers of uninsured indigent patients."
+    }
+]

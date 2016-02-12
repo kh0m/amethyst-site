@@ -9,7 +9,7 @@
 <body>
 
 <% if current_user %>
-  <p>You are logged in as: <%= current_user.email %></p>
+  <p>You are logged in as: <%= current_user.email %> <%= button_to "Home", user_path(current_user), method: :get %></p>
   <p>Your role: <%= current_user.role %></p>
   <%= button_to "Logout", logout_url, method: 'delete' %>
 <% end %>

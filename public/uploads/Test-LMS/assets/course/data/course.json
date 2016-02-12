@@ -1,0 +1,209 @@
+{
+  "client" : "Pinsonault",
+  "title" : "Style Guide",
+  "subtitle" : "Subtitle",
+  "content_version" : "xx.xx.xx",
+  "description" : "",
+  "disclaimer" : "FOR TRAINING PURPOSES ONLY. YOU MAY NOT SHOW OR DISTRIBUTE THIS ITEM. YOU MAY NOT DISCUSS THE INFORMATION IN THIS ITEM WITH CUSTOMERS.",
+  "product_number" : "ABCDE-12345",
+  "copyright" : "Copyright 2014",
+  "summary_url": "assets/course/misc/CCGPlaceholder.pdf",
+  "config" : {
+    "audioAutoplay" : true,
+    "assessmentRandomize" : true,
+    "assessmentRequiredScore" : 90,
+    "assessmentPoolCount" : 0,
+    "gate" : false,
+    "splash" : false,
+    "showInitialHelp" : true,
+	"addExitButton" : false
+  },
+  "topics" : [
+    {
+      "id" : 0,
+      "title" : "0. Overview",
+      "pages" : [
+        {
+          "id" : 0,
+          "audio" : "",
+          "sid" : "p0_0",
+          "title" : "Headings"
+        },
+        {
+          "id" : 1,
+          "audio" : "01_00_030.mp3",
+          "sid" : "p0_1",
+          "title" : "Buttons"
+        }
+      ]
+    },
+    {
+      "id" : 1,
+      "title" : "1. Widgets",
+      "pages" : [
+        {
+          "id" : 11,
+          "audio" : "",
+          "sid" : "p1_0",
+          "title" : "Vertical Tabs"
+        },
+        {
+          "id" : 12,
+          "audio" : "",
+          "sid" : "p1_1",
+          "title" : "Accordion"
+        },
+        {
+          "id" : 13,
+          "audio" : "",
+          "sid" : "p1_2",
+          "title" : "Tooltip"
+        },
+        {
+          "id" : 14,
+          "audio" : "",
+          "sid" : "p1_3",
+          "title" : "Term Tooltip"
+        },
+        {
+          "id" : 15,
+          "audio" : "",
+          "sid" : "p1_4",
+          "title" : "More Info Tooltip"
+        },
+        {
+          "id" : 16,
+          "audio" : "",
+          "sid" : "p1_5",
+          "title" : "Video"
+        },
+        {
+          "id" : 17,
+          "audio" : "",
+          "sid" : "p1_6",
+          "title" : "Image Zoom"
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "title" : "2. ILEs",
+      "pages" : [
+        {
+          "id" : 20,
+          "audio" : "",
+          "sid" : "p2_0",
+          "title" : "Multiple Choice"
+        },
+        {
+          "id" : 21,
+          "audio" : "",
+          "sid" : "p2_1",
+          "title" : "Assessment"
+        },
+        {
+          "id" : 22,
+          "audio" : "",
+          "sid" : "p2_2",
+          "title" : "Category"
+        },
+        {
+          "id" : 23,
+          "audio" : "",
+          "sid" : "p2_3",
+          "title" : "Matching"
+        },
+        {
+          "id" : 24,
+          "audio" : "",
+          "sid" : "p2_4",
+          "title" : "Characterize"
+        },
+        {
+          "id" : 25,
+          "audio" : "",
+          "sid" : "p2_5",
+          "title" : "Category Clicker"
+        },
+        {
+          "id" : 26,
+          "audio" : "",
+          "sid" : "p2_6",
+          "title" : "Text Input"
+        }
+      ]
+    },
+    {
+      "id" : 3,
+      "title" : "3. Text Elements",
+      "pages" : [
+        {
+          "id" : 30,
+          "audio" : "",
+          "sid" : "p3_0",
+          "title" : "Aside - Important"
+        },
+        {
+          "id" : 31,
+          "audio" : "",
+          "sid" : "p3_1",
+          "title" : "Aside - Did You Know?"
+        }
+      ]
+    },
+    {
+      "id" : 4,
+      "title" : "4. Sample Page Layouts",
+      "pages" : [
+        {
+          "id" : 40,
+          "audio" : "",
+          "sid" : "p4_0",
+          "title" : "Text & Graphic (with Image Zoom)"
+        },
+        {
+          "id" : 41,
+          "audio" : "",
+          "sid" : "p4_1",
+          "title" : "Text & Graphic + Vertical Tabs Widget"
+        },
+        {
+          "id" : 42,
+          "audio" : "",
+          "sid" : "p4_2",
+          "title" : "Text & Graphic + Accordian Widget"
+        },
+        {
+          "id" : 43,
+          "audio" : "",
+          "sid" : "p4_3",
+          "title" : "Centered Column Text & Graphic"
+        },
+        {
+          "id" : 44,
+          "audio" : "",
+          "sid" : "p4_4",
+          "title" : "Three Column Layout"
+        },
+        {
+          "id" : 45,
+          "audio" : "",
+          "sid" : "p4_5",
+          "title" : "Text & Tooltips Bar"
+        },
+        {
+          "id" : 46,
+          "audio" : "",
+          "sid" : "p4_6",
+          "title" : "Sample Tables"
+        },
+        {
+          "id" : 47,
+          "audio" : "",
+          "sid" : "p4_7",
+          "title" : "Video Page"
+        }
+      ]
+    }
+  ]
+}

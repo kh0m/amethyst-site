@@ -1,18 +1,17 @@
 <h1>All Users</h1>
 
-<% @users.each do |u| %>
-  <ul>
-    <li><%= u.email %></li>
-    <li>Role: <%= u.role %></li>
-    <li>Number of assigned courses: <%= u.courses.count %></li>
-    <li><%= link_to "Details", user_path(u.id) %></li>
-  </ul>
-<% end %>
-
-<% if current_user && current_user.admin? %>
-  <%= button_to "Add User", new_user_path %>
-<% end %>
-
-<br/>
-  <%= link_to "Back", user_path(current_user.id) %>
-<br/>
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Courses</th>
+  </tr>
+  <% @users.each do |u| %>
+    <tr>
+      <td><%= u.email %></td>
+      <td><%= u.role %></td>
+      <td><%= u.courses.count %></td>
+      <td><%= link_to "Details", user_path(u.id) %></td>
+    </tr>
+  <% end %>
+</table>

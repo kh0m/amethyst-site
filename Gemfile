@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# rubyzip
+gem 'rubyzip'
+
 # Auth0
 gem 'omniauth', '~> 1.2'
 gem 'omniauth-auth0', '~> 1.1'

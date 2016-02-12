@@ -8,12 +8,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def index
     @users = User.all
   end
 
   def update
     @user = User.find(params[:id])
+    if ( @user.course_ids = params[:user][:courses] && @user.update_attribute(:role, params[:user][:role]))
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
 

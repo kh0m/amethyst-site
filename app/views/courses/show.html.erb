@@ -1,14 +1,18 @@
-<p>
-  <strong>Title:</strong>
+<br/>
+<%= link_to "All Courses", courses_path %>
+
+<h2>
   <%= @course.title %>
-</p>
+</h2>
 
 <p>
   <strong>Location:</strong>
   <%= @course.file %>
 </p>
 
-<h3>Users for this course:</h3>
+
+
+<h3>Users for this course</h3>
 <table>
   <% @course.users.each do |user| %>
     <tr>
@@ -21,6 +25,3 @@
 <% if current_user && current_user.admin? %>
   <%= button_to "Edit Course", edit_course_path, {method: :get} %>
 <% end %>
-
-<br/><br/>
-<%= link_to "All Courses", courses_path %>
