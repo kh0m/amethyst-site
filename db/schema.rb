@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160212183130) do
+ActiveRecord::Schema.define(version: 20160212184729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160212183130) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "courses_users", force: :cascade do |t|
+  create_table "enrollments", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "course_id",  null: false
     t.datetime "created_at"
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(version: 20160212183130) do
     t.integer  "result_id"
   end
 
-  add_index "courses_users", ["course_id"], name: "index_courses_users_on_course_id", using: :btree
-  add_index "courses_users", ["result_id"], name: "index_courses_users_on_result_id", using: :btree
-  add_index "courses_users", ["user_id"], name: "index_courses_users_on_user_id", using: :btree
+  add_index "enrollments", ["course_id"], name: "index_enrollments_on_course_id", using: :btree
+  add_index "enrollments", ["result_id"], name: "index_enrollments_on_result_id", using: :btree
+  add_index "enrollments", ["user_id"], name: "index_enrollments_on_user_id", using: :btree
 
   create_table "results", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -53,5 +53,5 @@ ActiveRecord::Schema.define(version: 20160212183130) do
     t.integer  "role"
   end
 
-  add_foreign_key "courses_users", "results"
+  add_foreign_key "enrollments", "results"
 end

@@ -3,7 +3,8 @@ require 'zip'
 class Course < ActiveRecord::Base
   validates :title, presence: true, length: {minimum: 5}
   validates :file, presence: true
-  has_and_belongs_to_many :users
+  has_many :enrollments
+  has_many :users, through: :enrollments
 
   def upload(file)
     if File.extname(file.path) == '.zip'
