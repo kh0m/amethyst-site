@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if ( @user.course_ids = params[:user][:courses] && @user.update_attribute(:role, params[:user][:role]))
+    if ( @user.update_attribute(:course_ids, params[:user][:courses]) && @user.update_attribute(:role, params[:user][:role]))
       redirect_to @user
     else
       render 'edit'

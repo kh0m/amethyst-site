@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0"?>
 						<manifest identifier="style-guide" version="1.1"
-						          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+						          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
 						          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
-						          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-						          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd 
-						                              http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd 
+						          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+						                              http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
 						                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">  <metadata>
       <schema>ADL SCORM</schema>
       <schemaversion>1.2</schemaversion>
@@ -50,9 +50,7 @@
 <file href = "assets/vendor/Jplayer.swf"/>
 <file href = "data/aicc.js"/>
 <file href = "data/scorm.js"/>
-<file href = "js/bakmain.js"/>
 <file href = "js/main.js"/>
-<file href = "js/pinsonault.js"/>
 <file href = "stylesheets/fonts/fontawesome-webfont.eot"/>
 <file href = "stylesheets/fonts/fontawesome-webfont.svg"/>
 <file href = "stylesheets/fonts/fontawesome-webfont.ttf"/>
@@ -63,7 +61,6 @@
 <file href = "stylesheets/fonts/OpenSans-Regular-webfont.ttf"/>
 <file href = "stylesheets/fonts/OpenSans-Regular-webfont.woff"/>
 <file href = "stylesheets/brand.css"/>
-<file href = "stylesheets/font-awesome.min.css"/>
 <file href = "stylesheets/main.css"/>
 <file href = "adlcp_rootv1p2.xsd"/>
 <file href = "courseMetadata.xml"/>

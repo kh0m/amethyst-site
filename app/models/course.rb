@@ -28,4 +28,8 @@ class Course < ActiveRecord::Base
     end
   end
 
+  def remove(file)
+    # code to remove files
+  end
+
 end
