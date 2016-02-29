@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require_tree .
 
-//= require scorm12api
+//= require api_adapter
