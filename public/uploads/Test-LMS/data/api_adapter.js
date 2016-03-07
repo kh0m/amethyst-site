@@ -66,9 +66,12 @@ pinso.data.adapter = function($, User){
 
 
     getProperty: function(prop){
-      value = null;
-      value = this.LMSMethods.GET(prop);
-      return value;
+      var value = null;
+      $.getJSON( "/users/current.json", function( data ) {
+        value = data[prop];
+        return value;
+      });
+      alert("getProperty: " + value);
     },
 
     log: function(){
@@ -98,7 +101,7 @@ pinso.data.adapter = function($, User){
 
 
     LMSProperties: {
-      STUDENT_NAME: "cmi.core.student_name",
+      STUDENT_NAME: "email",
       STUDENT_ID: "cmi.core.student_id",
       LOCATION: "cmi.core.lesson_location",
       STATUS: "cmi.core.lesson_status",
@@ -150,23 +153,26 @@ pinso.data.adapter = function($, User){
       EXIT_LOGOUT: "logout"
     },
 
-    cmi: {
-      suspend_data: "",
-      core: {
-        student_name: "",
-        student_id: "",
-        lesson_location: "",
-        lesson_status: "",
-        credit: "",
-        total_time: "",
-        exit: "",
-        score: {
-          raw: "",
-          min: "",
-          max: ""
+    datamodel: {
+      cmi: {
+        suspend_data: "",
+        core: {
+          student_name: "ken",
+          student_id: "",
+          lesson_location: "",
+          lesson_status: "",
+          credit: "",
+          total_time: "",
+          exit: "",
+          score: {
+            raw: "",
+            min: "",
+            max: ""
+          }
         }
       }
     }
+
 
   }
 }

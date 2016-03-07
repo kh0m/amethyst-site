@@ -5,8 +5,9 @@ class Auth0Controller < ApplicationController
     session[:userinfo] = request.env['omniauth.auth']
     data = session[:userinfo]
     email = data.info.email
+    user_id = data.uid
 
-    user = User.find_by_email(email) ? User.find_by_email(email) : User.create(email: "#{email}")
+    user = User.find_by_email(email) ? User.find_by_email(email) : User.create(email: "#{email}", A0user_id: "#{user_id}")
 
     # redirect to the URL you want after successfull auth
     redirect_to "/users/#{user.id}"

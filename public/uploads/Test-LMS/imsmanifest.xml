@@ -50,6 +50,7 @@
 <file href = "assets/vendor/Jplayer.swf"/>
 <file href = "data/aicc.js"/>
 <file href = "data/scorm.js"/>
+<file href = "data/api_adapter.js"/>
 <file href = "js/main.js"/>
 <file href = "stylesheets/fonts/fontawesome-webfont.eot"/>
 <file href = "stylesheets/fonts/fontawesome-webfont.svg"/>
