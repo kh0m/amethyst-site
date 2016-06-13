@@ -1,13 +1,17 @@
-<h1>Welcome!</h1>
+<h2>Welcome!</h2>
 
-<h2>User Page for <%=@user.email%></h2>
+<h4>User Page for <%=@user.email%></h3>
+
+<h4>User Role: <%= @user.role %></h3>
 
 <% if current_user && current_user.admin? %>
-  <%= link_to "All Users", users_path%>
-  <%= link_to "All Courses", courses_path%>
+<nav>
+<ul class="nav nav-pills">
+  <li><%= link_to "All Users", users_path%></li>
+  <li><%= link_to "All Courses", courses_path%></li>
+</ul>
+</nav>
 <% end %>
-
-<h3>User Role: <%= @user.role %></h3>
 
 <h3>Assigned Courses</h3>
 <table>

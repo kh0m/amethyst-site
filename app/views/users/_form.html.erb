@@ -20,7 +20,7 @@
 
   <h3>Select Courses</h3>
   <%= f.collection_check_boxes(:courses, Course.all, :id, :title) do |b| %>
-      <%= b.check_box checked: @user.course_ids.include?(b.value) %><%= b.label %><br/>
+      <%= b.check_box checked: @user.course_ids.include?(b.value) %> <%= b.label %><br/>
   <% end %>
 
   <br/>
