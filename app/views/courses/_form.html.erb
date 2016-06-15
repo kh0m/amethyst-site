@@ -1,7 +1,7 @@
 <%= form_for @course do |f| %>
 
   <%= f.collection_check_boxes(:users, User.all, :id, :email) do |b| %>
-      <%= b.check_box checked: @course.user_ids.include?(b.value) %><%= b.label %><br/>
+      <%= b.check_box checked: @course.user_ids.include?(b.value) %> <%= b.label %><br/>
   <% end %>
 
   <br/>

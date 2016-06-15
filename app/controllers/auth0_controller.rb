@@ -6,7 +6,7 @@ class Auth0Controller < ApplicationController
     data = session[:userinfo]
     email = data.info.email
 
-    user = User.find_by_email(email) ? User.find_by_email(email) : User.create(email: "#{email}")
+    user = User.find_by_email(email) ? User.find_by_email(email) : User.create(email: "#{email}", role: "admin")
 
     # redirect to the URL you want after successfull auth
     redirect_to "/users/#{user.id}"

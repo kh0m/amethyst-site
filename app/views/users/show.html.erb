@@ -14,7 +14,7 @@
 <% end %>
 
 <h3>Assigned Courses</h3>
-<table>
+<table class="table table-striped">
   <% @user.courses.each do |c| %>
     <tr>
       <th><%= c.title %></th>
