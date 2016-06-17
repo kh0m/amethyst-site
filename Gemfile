@@ -11,6 +11,12 @@ gem 'omniauth-auth0', '~> 1.1'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+# highcharts
+gem 'highcharts-rails', '~> 4.2', '>= 4.2.5'
+
+# jquery-turbolinks
+gem 'jquery-turbolinks'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the sdatabase for Active Record

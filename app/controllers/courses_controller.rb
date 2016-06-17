@@ -41,6 +41,13 @@ class CoursesController < ApplicationController
       redirect_to courses_path
     end
 
+    def index_chart
+      @courses = Course.all
+
+      render json: { data: @courses.map{ |c| { title: c.title, users: c.users.count } } }
+
+    end
+
 
     private
       def course_params

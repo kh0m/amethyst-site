@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'auth0#destroy'
 
+  get 'courses/index_chart' => 'courses#index_chart'
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
