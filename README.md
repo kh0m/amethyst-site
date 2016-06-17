@@ -7,3 +7,8 @@ It contains user functionality with roles, and the ability to upload zip files c
 
 - This app utilizes Auth0 for authentication and user management
 - [Auth0 site](https://auth0.com)
+
+## Data Visualization
+
+- This app includes charts from Highcharts
+- [Highcharts site](http://www.highcharts.com)
