@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+    before_action :require_user, only: [:index, :show]
+
     def index
       @courses = Course.all
     end
