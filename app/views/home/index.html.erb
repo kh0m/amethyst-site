@@ -24,7 +24,7 @@
 
   function signin() {
     lock.show({
-        callbackURL: 'http://localhost:3000/auth/auth0/callback',
+        callbackURL: 'https://amethyst-learning-site.herokuapp.com/auth/auth0/callback',
         responseType: 'code',
         authParams: {
           scope: 'openid profile'
